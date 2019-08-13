@@ -1,9 +1,13 @@
 import React, { ReactNode } from 'react'
-import navbar from './nav'
+import Header from './header'
 
 class Home extends React.Component<ReactNode> {
     render() {
-        return <div></div>
+        return (
+            <div>
+                <Header></Header>
+            </div>
+        )
     }
 }
 
