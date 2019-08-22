@@ -1,20 +1,50 @@
-import React, { ReactNode } from 'react'
-import logo from '../images/headshotpencil.png'
+import React from 'react'
 import Navbar from './nav'
+import Typist from 'react-typist'
 
-class Header extends React.Component<ReactNode> {
-    logo: any = logo
-    // constructor(props: any) {
-    //     super(props)
-    // }
+type MyState = { letters: string[]; letter: any }
+type MyProps = {}
+
+class Header extends React.Component<MyProps, MyState> {
+    lettersView: string[] = []
+    constructor(props: any) {
+        super(props)
+        this.state = {
+            letters: [
+                'H',
+                'i',
+                ' ',
+                'I',
+                "'",
+                'm',
+                'J',
+                'u',
+                's',
+                't',
+                'i',
+                'n',
+                '\n',
+                'b',
+                'u',
+                'i',
+                'l',
+                'd',
+                ' ',
+                't',
+                'h',
+                'i',
+                'n',
+                'g',
+                's',
+            ],
+            letter: null,
+        }
+    }
 
     render() {
         return (
             <header className="App-header">
-                <img src={this.logo} className="App-logo" alt="logo" />
-                <p>
-                    <h1>Hi I'm Justin, I code things.</h1>
-                </p>
+                {`${this.loopThroughLetters()}`}
                 <Navbar></Navbar>
             </header>
         )
