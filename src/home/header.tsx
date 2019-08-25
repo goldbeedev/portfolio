@@ -1,20 +1,27 @@
-import React, { ReactNode } from 'react'
-import logo from '../images/headshotpencil.png'
+import React from 'react'
 import Navbar from './nav'
+import Typist from 'react-typist'
 
-class Header extends React.Component<ReactNode> {
-    logo: any = logo
-    // constructor(props: any) {
-    //     super(props)
-    // }
+interface MyState {}
+interface MyProps {}
+
+class Header extends React.Component<MyProps, MyState> {
+    constructor(props: any) {
+        super(props)
+        this.state = {}
+    }
 
     render() {
         return (
             <header className="App-header">
-                <img src={this.logo} className="App-logo" alt="logo" />
-                <p>
-                    <h1>Hi I'm Justin, I code things.</h1>
-                </p>
+                <h1>
+                    <Typist cursor={{ hideWhenDone: true }}>
+                        Hi I'm Justin, I love to code.
+                        <Typist.Backspace count={15} delay={500} />I build
+                        things.
+                    </Typist>
+                </h1>
+
                 <Navbar></Navbar>
             </header>
         )

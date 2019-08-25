@@ -1,17 +1,30 @@
-body {
-    color: $body-bg;
-}
-
-ul {
-    padding: 10px;
-    li {
-        padding: 10px;
-        color: white;
-        list-style-type: none;
-        display: inline;
+header {
+    background-color: $pale-teal;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(20px + 2vmin);
+    color: $hipster-brown;
+    h1 {
+        font: {
+            family: 'Arvo';
+            size: 96px;
+        }
     }
 }
 
-h1 {
-    padding: 25px;
+ul {
+    font: {
+        family: 'Arvo';
+        size: 36px;
+    }
+    padding: 10px;
+    li {
+        padding: 10px;
+        color: $hipster-brown;
+        list-style-type: none;
+        display: inline;
+    }
 }
