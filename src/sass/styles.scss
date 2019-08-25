@@ -1,12 +1,12 @@
 header {
-    background-color: #000000;
+    background-color: $pale-teal;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(20px + 2vmin);
-    color: white;
+    color: $hipster-brown;
     h1 {
         font: {
             family: 'Arvo';
@@ -16,10 +16,14 @@ header {
 }
 
 ul {
+    font: {
+        family: 'Arvo';
+        size: 36px;
+    }
     padding: 10px;
     li {
         padding: 10px;
-        color: white;
+        color: $hipster-brown;
         list-style-type: none;
         display: inline;
     }
