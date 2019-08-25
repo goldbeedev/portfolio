@@ -2,8 +2,8 @@ import React from 'react'
 import Navbar from './nav'
 import Typist from 'react-typist'
 
-type MyState = {}
-type MyProps = {}
+interface MyState {}
+interface MyProps {}
 
 class Header extends React.Component<MyProps, MyState> {
     constructor(props: any) {
