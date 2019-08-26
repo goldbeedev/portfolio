@@ -1,16 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
 import './main.scss'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 import Contact from './contact/contact'
+import Skills from './skills/skills'
+import Portfolio from './portfolio/portfolio'
 
 const routing = (
     <Router>
         <div>
-            <Route path="/" component={App} />
+            <Route exact path="/" component={App} />
             <Route path="/contact" component={Contact} />
+            <Route path="/skills" component={Skills} />
+            <Route path="/portfolio" component={Portfolio} />
         </div>
     </Router>
 )
