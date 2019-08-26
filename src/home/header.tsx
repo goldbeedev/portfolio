@@ -13,17 +13,18 @@ class Header extends React.Component<MyProps, MyState> {
 
     render() {
         return (
-            <header className="App-header">
-                <h1>
-                    <Typist cursor={{ hideWhenDone: true }}>
-                        Hi I'm Justin, I love to code.
-                        <Typist.Backspace count={15} delay={500} />I build
-                        things.
-                    </Typist>
-                </h1>
-
-                <Navbar></Navbar>
-            </header>
+            <div>
+                <header className="App-container">
+                    <h1>
+                        <Typist cursor={{ hideWhenDone: true }}>
+                            Hi I'm Justin, I love to code.
+                            <Typist.Backspace count={15} delay={500} />I build
+                            things.
+                        </Typist>
+                    </h1>
+                    <Navbar className={'home'}></Navbar>
+                </header>
+            </div>
         )
     }
 }

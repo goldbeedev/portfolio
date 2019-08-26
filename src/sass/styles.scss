@@ -1,4 +1,4 @@
-header {
+.App-container {
     background-color: $pale-teal;
     min-height: 100vh;
     display: flex;
@@ -15,7 +15,12 @@ header {
     }
 }
 
-ul {
+nav {
+    &.not-home {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
     font: {
         family: 'Arvo';
         size: 36px;
@@ -26,5 +31,14 @@ ul {
         color: $hipster-brown;
         list-style-type: none;
         display: inline;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        text-decoration: none;
+        color: $light-hipster-brown;
     }
 }
