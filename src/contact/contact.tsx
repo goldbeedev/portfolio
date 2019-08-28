@@ -8,17 +8,17 @@ class Contact extends React.Component {
                 <Navbar className={'not-home'}></Navbar>
                 <h1>
                     <img
-                        className="contact-icon"
+                        className="contact-icon hvr-grow"
                         src="../images/Gmail_Icon.png"
                         alt=""
                     />
                     <img
-                        className="contact-icon"
+                        className="contact-icon hvr-grow"
                         src="../images/github-icon.png"
                         alt=""
                     />
                     <img
-                        className="contact-icon"
+                        className="contact-icon hvr-grow"
                         src="../images/linkedin-icon.png"
                         alt=""
                     />
