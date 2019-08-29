@@ -15,7 +15,6 @@ class Skills extends React.Component {
                             <Typist cursor={{ hideWhenDone: true }}>
                                 <Typist.Delay ms={1000} />
                                 <ul>
-                                    <h2>Experienced</h2>
                                     <li>JavaScript</li>
                                     <li>jQuery</li>
                                     <li>HTML</li>
@@ -27,7 +26,6 @@ class Skills extends React.Component {
                             <Typist cursor={{ hideWhenDone: true }}>
                                 <Typist.Delay ms={4000} />
                                 <ul>
-                                    <h2>Competent</h2>
                                     <li>Angular</li>
                                     <li>React</li>
                                     <li>Git</li>
@@ -43,7 +41,6 @@ class Skills extends React.Component {
                             <Typist cursor={{ hideWhenDone: true }}>
                                 <Typist.Delay ms={8000} />
                                 <ul>
-                                    <h2>Some Exposure</h2>
                                     <li>C# - Microservices</li>
                                     <li>AWS</li>
                                     <li>Express</li>

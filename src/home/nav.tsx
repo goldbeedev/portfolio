@@ -12,18 +12,18 @@ class Navbar extends React.Component<MyProps> {
     render() {
         return (
             <nav className={this.props.className}>
+                {this.displayBee && (
+                    <li>
+                        <Link to="/">
+                            <img
+                                className="home-icon"
+                                src="./images/bee-icon-11.png"
+                            ></img>
+                        </Link>
+                    </li>
+                )}
                 <ul>
                     <Typist cursor={{ hideWhenDone: true }}>
-                        {this.displayBee && (
-                            <li>
-                                <Link to="/">
-                                    <img
-                                        className="home-icon"
-                                        src="./images/bee-icon-11.png"
-                                    ></img>
-                                </Link>
-                            </li>
-                        )}
                         <Typist.Delay ms={1000} />
                         <li>
                             <Link to="/portfolio">Portfolio</Link>

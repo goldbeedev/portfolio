@@ -7,6 +7,9 @@ import * as serviceWorker from './serviceWorker'
 import Contact from './contact/contact'
 import Skills from './skills/skills'
 import Portfolio from './portfolio/portfolio'
+import Movies from './movies/movies'
+import TicTacToe from './tictactoe/tictactoe'
+import HearthstoneCards from './hearthstonecards/hearthstonecards'
 
 const routing = (
     <Router>
@@ -15,6 +18,9 @@ const routing = (
             <Route path="/contact" component={Contact} />
             <Route path="/skills" component={Skills} />
             <Route path="/portfolio" component={Portfolio} />
+            <Route path="/movie-search" component={Movies} />
+            <Route path="/tictactoe" component={TicTacToe} />
+            <Route path="/hearthstonecards" component={HearthstoneCards} />
         </div>
     </Router>
 )
