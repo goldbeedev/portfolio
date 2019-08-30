@@ -3,9 +3,9 @@ import Navbar from '../home/nav'
 import { movie } from '../interfaces'
 import constants from '../constants'
 import axios from 'axios'
-
+//some comment
 type MyProps = {}
-type MyState = { movies: string; title: string; year: string }
+type MyState = { movies: { Title: string }; title: string; year: string }
 
 class Movies extends React.Component<MyProps, MyState> {
     movieList: [] = []
@@ -13,7 +13,7 @@ class Movies extends React.Component<MyProps, MyState> {
     constructor(props: any) {
         super(props)
         this.state = {
-            movies: '',
+            movies: { Title: '' },
             title: 'Enter a title',
             year: '',
         }
@@ -36,7 +36,6 @@ class Movies extends React.Component<MyProps, MyState> {
         })
         event.preventDefault()
     }
-    Thing = this.state.movies
 
     render() {
         return (
@@ -82,6 +81,7 @@ class Movies extends React.Component<MyProps, MyState> {
                     </div>
                     <div className="main-content clearfix">
                         <ul id="movie-list" className="movie-list"></ul>
+                        {this.state.movies.Title}
                     </div>
                 </div>
             </div>
