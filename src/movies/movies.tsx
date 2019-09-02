@@ -5,7 +5,11 @@ import constants from '../constants'
 import axios from 'axios'
 //some comment
 type MyProps = {}
-type MyState = { movies: { Title: string }; title: string; year: string }
+type MyState = {
+    movies: [{ Title: string; Poster: string }]
+    title: string
+    year: string
+}
 
 class Movies extends React.Component<MyProps, MyState> {
     movieList: [] = []
@@ -13,7 +17,7 @@ class Movies extends React.Component<MyProps, MyState> {
     constructor(props: any) {
         super(props)
         this.state = {
-            movies: { Title: '' },
+            movies: [{ Title: '', Poster: '' }],
             title: 'Enter a title',
             year: '',
         }
@@ -26,8 +30,8 @@ class Movies extends React.Component<MyProps, MyState> {
         this.setState({ ...this.state, [event.target.name]: value })
     }
     handleSubmit(event: any) {
-        axios.get(this.omdb + 't=' + this.state.title).then(res => {
-            const movies = res.data
+        axios.get(this.omdb + 's=' + this.state.title).then(res => {
+            const movies = res.data.Search
             this.setState({ movies })
             console.log(this.state.movies)
             // const thing = this.state.movies.map((movie: any, idx: number) => (
@@ -81,7 +85,14 @@ class Movies extends React.Component<MyProps, MyState> {
                     </div>
                     <div className="main-content clearfix">
                         <ul id="movie-list" className="movie-list"></ul>
-                        {this.state.movies.Title}
+                        {this.state.movies.map((movie: any, idx: number) => (
+                            <li key={idx} className="single-movie">
+                                <div className="poster-wrap">
+                                    <img src={movie.Poster} />
+                                </div>
+                                {movie.Title}
+                            </li>
+                        ))}
                     </div>
                 </div>
             </div>

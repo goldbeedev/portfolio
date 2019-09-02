@@ -15,6 +15,17 @@
     }
 }
 
+.single-movie {
+    display: inline-block;
+    width: 25%;
+    list-style: none;
+}
+
+.poster-wrap {
+    height: 290px;
+    overflow: hidden;
+}
+
 nav {
     .home-icon {
         position: absolute;
