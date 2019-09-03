@@ -6,3 +6,7 @@ export interface movie {
         r: string
     }
 }
+
+export interface hearthstoneApi {
+    apiUrl: string
+}

@@ -1,6 +1,17 @@
-ul {
-    &#movie-list > li.single-movie {
-        list-style: none;
-        max-width: 25%;
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+.movie-list {
+    padding-inline-start: 0px;
+}
+
+@media (min-width: 0) and (max-width: 549px) {
+    .single-movie {
+        width: 100%;
+        text-align: center;
     }
 }

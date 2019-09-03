@@ -17,12 +17,14 @@
 
 .single-movie {
     display: inline-block;
-    width: 25%;
     list-style: none;
+    margin: 1.925em 0 0;
+    font-size: 18px;
+    flex-direction: row;
 }
 
 .poster-wrap {
-    height: 290px;
+    max-height: 375px;
     overflow: hidden;
 }
 

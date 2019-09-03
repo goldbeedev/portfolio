@@ -6,9 +6,8 @@ import axios from 'axios'
 //some comment
 type MyProps = {}
 type MyState = {
-    movies: [{ Title: string; Poster: string }]
+    movies: [{ Title: string; Poster: string; Year: string }]
     title: string
-    year: string
 }
 
 class Movies extends React.Component<MyProps, MyState> {
@@ -17,9 +16,8 @@ class Movies extends React.Component<MyProps, MyState> {
     constructor(props: any) {
         super(props)
         this.state = {
-            movies: [{ Title: '', Poster: '' }],
+            movies: [{ Title: '', Poster: '', Year: '' }],
             title: 'Enter a title',
-            year: '',
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -63,14 +61,6 @@ class Movies extends React.Component<MyProps, MyState> {
                                     value={this.state.title}
                                     onChange={this.handleChange.bind(this)}
                                 />
-                                <label className="is-hidden">Any Year</label>
-                                <input
-                                    type="text"
-                                    name="year"
-                                    id="year"
-                                    value={this.state.year}
-                                    onChange={this.handleChange.bind(this)}
-                                />
                                 <button
                                     type="submit"
                                     id="submit"
@@ -83,7 +73,7 @@ class Movies extends React.Component<MyProps, MyState> {
                             </form>
                         </div>
                     </div>
-                    <div className="main-content clearfix">
+                    <div className="main-content">
                         <ul id="movie-list" className="movie-list"></ul>
                         {this.state.movies.map((movie: any, idx: number) => (
                             <li key={idx} className="single-movie">
@@ -91,6 +81,8 @@ class Movies extends React.Component<MyProps, MyState> {
                                     <img src={movie.Poster} />
                                 </div>
                                 {movie.Title}
+                                <br />
+                                {movie.Year}
                             </li>
                         ))}
                     </div>
