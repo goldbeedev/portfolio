@@ -3,7 +3,7 @@ import Navbar from '../home/nav'
 import axios from 'axios'
 import { hearthstoneApi } from '../interfaces'
 import constants from '../constants'
-//some comment
+
 type MyProps = {}
 type MyState = {
     cards: [{ name: string; imgGold: string; flavor: string }]
@@ -14,9 +14,8 @@ class HearthStoneCards extends React.Component<MyProps, MyState> {
     hsapi: hearthstoneApi['apiUrl'] = constants.HEARTHSTONE_URL
     config = {
         headers: {
-            // 'x-rapidapi-host': 'omgvamp-hearthstone-v1.p.rapidapi.com',
-            'x-rapidapi-key':
-                'Wyu9lukXV3mshwudS8FXOvmdb2QQp1fe48ejsnjGUOMahVmTLc',
+            'x-rapidapi-host': 'omgvamp-hearthstone-v1.p.rapidapi.com',
+            'x-rapidapi-key': process.env.REACT_APP_HEARTHSTONE_API_KEY,
         },
     }
     constructor(props: any) {
@@ -34,16 +33,11 @@ class HearthStoneCards extends React.Component<MyProps, MyState> {
         this.setState({ ...this.state, [event.target.name]: value })
     }
     handleSubmit(event: any) {
-        axios
-            .get(this.hsapi + `%7B${this.state.card}%7D`, this.config)
-            .then(res => {
-                const cards = res.data.Search
-                this.setState({ cards })
-                console.log(this.state.cards)
-                // const thing = this.state.movies.map((movie: any, idx: number) => (
-                //     <li key={idx}>{movie}</li>
-                // ))
-            })
+        axios.get(this.hsapi + `${this.state.card}`, this.config).then(res => {
+            const cards = res.data
+            this.setState({ cards })
+            console.log(this.state.cards)
+        })
         event.preventDefault()
     }
 
@@ -86,8 +80,8 @@ class HearthStoneCards extends React.Component<MyProps, MyState> {
                     <div className="main-content">
                         <ul id="movie-list" className="movie-list"></ul>
                         {this.state.cards.map((card: any, idx: number) => (
-                            <li key={idx} className="single-movie">
-                                <div className="poster-wrap">
+                            <li key={idx} className="single-card">
+                                <div className="card-wrap">
                                     <img src={card.imgGold} />
                                 </div>
                                 {card.name}
