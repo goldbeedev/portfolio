@@ -45,11 +45,8 @@
         ]
     },
     "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^1.13.0",
-        "@typescript-eslint/parser": "^1.13.0",
         "prettier": "^1.18.2",
         "prettierrc": "0.0.0-5",
-        "react-typist": "^2.0.5",
         "tslint": "^5.18.0"
     }
 }
