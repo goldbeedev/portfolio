@@ -13,7 +13,10 @@ class Portfolio extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-4">
-                            <a href="http://myaccount.glidewelldental.com">
+                            <a
+                                href="http://myaccount.glidewelldental.com"
+                                target="_blank"
+                            >
                                 <img
                                     className="portfolio-pic hvr-grow"
                                     src="../images/myaccount.png"
@@ -45,7 +48,10 @@ class Portfolio extends React.Component {
                             </div>
                         </div>
                         <div className="col-sm-4">
-                            <a href="https://glidewell.io/roi-calculator/">
+                            <a
+                                href="https://glidewell.io/roi-calculator/"
+                                target="_blank"
+                            >
                                 <img
                                     className="portfolio-pic hvr-grow"
                                     src="../images/roi-calc.png"
@@ -78,7 +84,10 @@ class Portfolio extends React.Component {
                             </div>
                         </div>
                         <div className="col-sm-4">
-                            <a href="http://hearthstonetierlist.com">
+                            <a
+                                href="http://hearthstonetierlist.com"
+                                target="_blank"
+                            >
                                 <img
                                     className="portfolio-pic hvr-grow"
                                     src="../images/htlpic.png"
@@ -92,7 +101,7 @@ class Portfolio extends React.Component {
                             </div>
                         </div>
                         <div className="col-sm-4">
-                            <a href="http://lvddslab.com">
+                            <a href="http://lvddslab.com" target="_blank">
                                 <img
                                     className="portfolio-pic hvr-grow"
                                     src="../images/lvdds.png"
@@ -109,7 +118,10 @@ class Portfolio extends React.Component {
                             </div>
                         </div>
                         <div className="col-sm-4">
-                            <a href="https://github.com/goldbeedev/portfolio">
+                            <a
+                                href="https://github.com/goldbeedev/portfolio"
+                                target="_blank"
+                            >
                                 <img
                                     className="portfolio-pic hvr-grow"
                                     src="../images/portfolio.png"
