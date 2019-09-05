@@ -7,21 +7,27 @@ class Contact extends React.Component {
             <div className="App-container">
                 <Navbar className={'not-home'}></Navbar>
                 <h1>
-                    <img
-                        className="contact-icon hvr-grow"
-                        src="../images/Gmail_Icon.png"
-                        alt=""
-                    />
-                    <img
-                        className="contact-icon hvr-grow"
-                        src="../images/github-icon.png"
-                        alt=""
-                    />
-                    <img
-                        className="contact-icon hvr-grow"
-                        src="../images/linkedin-icon.png"
-                        alt=""
-                    />
+                    <a href="mailto:goldbee500@gmail.com?subject=Hi Justin!">
+                        <img
+                            className="contact-icon hvr-grow"
+                            src="../images/Gmail_Icon.png"
+                            alt=""
+                        />
+                    </a>
+                    <a href="https://github.com/goldbeedev">
+                        <img
+                            className="contact-icon hvr-grow"
+                            src="../images/github-icon.png"
+                            alt=""
+                        />
+                    </a>
+                    <a href="https://www.linkedin.com/in/justin-goldby-b0885b39/">
+                        <img
+                            className="contact-icon hvr-grow"
+                            src="../images/linkedin-icon.png"
+                            alt=""
+                        />
+                    </a>
                 </h1>
             </div>
         )

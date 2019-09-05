@@ -17,7 +17,7 @@ class Movies extends React.Component<MyProps, MyState> {
         super(props)
         this.state = {
             movies: [{ Title: '', Poster: '', Year: '' }],
-            title: 'Enter a title',
+            title: '',
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)

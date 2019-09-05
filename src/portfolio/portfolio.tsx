@@ -19,6 +19,15 @@ class Portfolio extends React.Component {
                                     src="../images/myaccount.png"
                                 ></img>
                             </a>
+                            <div>
+                                <p>Glidewell My Account</p>
+                                <ul className="portfolio-list">
+                                    <li>Angular 7</li>
+                                    <li>AWS</li>
+                                    <li>C# Microservices</li>
+                                    <li>TypeScript</li>
+                                </ul>
+                            </div>
                         </div>
                         <div className="col-sm-4">
                             <Link to="/movie-search">
@@ -27,14 +36,29 @@ class Portfolio extends React.Component {
                                     src="../images/moviesearchpic.png"
                                 ></img>
                             </Link>
+                            <div>
+                                <p>Moviesearch Api</p>
+                                <ul className="portfolio-list">
+                                    <li>ReactJS</li>
+                                    <li>Axios</li>
+                                </ul>
+                            </div>
                         </div>
                         <div className="col-sm-4">
-                            <Link to="/tictactoe">
+                            <a href="https://glidewell.io/roi-calculator/">
                                 <img
                                     className="portfolio-pic hvr-grow"
-                                    src="../images/tictacpic.png"
+                                    src="../images/roi-calc.png"
                                 ></img>
-                            </Link>
+                            </a>
+                            <div>
+                                <p>Glidewell.io ROI Calculator</p>
+                                <ul className="portfolio-list">
+                                    <li>JavaScript/jQuery</li>
+                                    <li>AWS</li>
+                                    <li>PHP</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div className="row">
@@ -42,9 +66,16 @@ class Portfolio extends React.Component {
                             <Link to="/hearthstonecards">
                                 <img
                                     className="portfolio-pic hvr-grow"
-                                    src="../images/moviesearchpic.png"
+                                    src="../images/hearthstonecard.png"
                                 ></img>
                             </Link>
+                            <div>
+                                <p>Hearthstone Card Search</p>
+                                <ul className="portfolio-list">
+                                    <li>ReactJS</li>
+                                    <li>AWS</li>
+                                </ul>
+                            </div>
                         </div>
                         <div className="col-sm-4">
                             <a href="http://hearthstonetierlist.com">
@@ -53,6 +84,12 @@ class Portfolio extends React.Component {
                                     src="../images/htlpic.png"
                                 ></img>
                             </a>
+                            <div>
+                                <p>Hearthstone Tier List</p>
+                                <ul className="portfolio-list">
+                                    <li>AngularJS</li>
+                                </ul>
+                            </div>
                         </div>
                         <div className="col-sm-4">
                             <a href="http://lvddslab.com">
@@ -61,6 +98,30 @@ class Portfolio extends React.Component {
                                     src="../images/lvdds.png"
                                 ></img>
                             </a>
+                            <div>
+                                <p>LVDDS Lab</p>
+                                <ul className="portfolio-list">
+                                    <li>Wordpress</li>
+                                    <li>AWS</li>
+                                    <li>PHP</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-sm-4">
+                            <a href="https://github.com/goldbeedev/portfolio">
+                                <img
+                                    className="portfolio-pic hvr-grow"
+                                    src="../images/portfolio.png"
+                                ></img>
+                            </a>
+                            <div>
+                                <p>This Site Repo</p>
+                                <ul className="portfolio-list">
+                                    <li>ReactJS</li>
+                                    <li>TypeScript</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

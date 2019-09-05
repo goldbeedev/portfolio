@@ -2,11 +2,16 @@ ul {
     li {
         font: {
             family: 'Arvo';
-            size: 32px;
+            size: calc(10px + 2vmin);
         }
     }
     h2 {
         margin: 20px;
         size: 42px;
+    }
+    &.portfolio-list {
+        li {
+            font-size: 18px;
+        }
     }
 }

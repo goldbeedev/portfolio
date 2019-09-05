@@ -22,7 +22,7 @@ class HearthStoneCards extends React.Component<MyProps, MyState> {
         super(props)
         this.state = {
             cards: [{ name: '', imgGold: '', flavor: '' }],
-            card: 'Enter a card name',
+            card: '',
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -56,7 +56,7 @@ class HearthStoneCards extends React.Component<MyProps, MyState> {
                                 onSubmit={this.handleSubmit}
                             >
                                 <label className="is-hidden">
-                                    Search a card
+                                    Search for a card
                                 </label>
                                 <input
                                     type="text"
