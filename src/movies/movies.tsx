@@ -24,17 +24,12 @@ class Movies extends React.Component<MyProps, MyState> {
     }
     handleChange(event: any) {
         const value = event.target.value
-        console.log(this.state.title)
         this.setState({ ...this.state, [event.target.name]: value })
     }
     handleSubmit(event: any) {
         axios.get(this.omdb + 's=' + this.state.title).then(res => {
             const movies = res.data.Search
             this.setState({ movies })
-            console.log(this.state.movies)
-            // const thing = this.state.movies.map((movie: any, idx: number) => (
-            //     <li key={idx}>{movie}</li>
-            // ))
         })
         event.preventDefault()
     }

@@ -8,6 +8,7 @@ type MyProps = {}
 type MyState = {
     cards: [{ name: string; imgGold: string; flavor: string }]
     card: string
+    notFound: boolean
 }
 
 class HearthStoneCards extends React.Component<MyProps, MyState> {
@@ -23,21 +24,29 @@ class HearthStoneCards extends React.Component<MyProps, MyState> {
         this.state = {
             cards: [{ name: '', imgGold: '', flavor: '' }],
             card: '',
+            notFound: false,
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
     handleChange(event: any) {
         const value = event.target.value
-        console.log(this.state.card)
         this.setState({ ...this.state, [event.target.name]: value })
     }
     handleSubmit(event: any) {
-        axios.get(this.hsapi + `${this.state.card}`, this.config).then(res => {
-            const cards = res.data
-            this.setState({ cards })
-            console.log(this.state.cards)
-        })
+        axios
+            .get(this.hsapi + `${this.state.card}`, this.config)
+            .then(res => {
+                const notFound = false
+                this.setState({ notFound })
+                const cards = res.data
+                this.setState({ cards })
+            })
+            .catch(error => {
+                console.log(error)
+                const notFound = true
+                this.setState({ notFound })
+            })
         event.preventDefault()
     }
 
@@ -79,6 +88,17 @@ class HearthStoneCards extends React.Component<MyProps, MyState> {
                     </div>
                     <div className="main-content">
                         <ul id="movie-list" className="movie-list"></ul>
+                        {this.state.notFound && (
+                            <div>
+                                Card not found, for a list of cards click{' '}
+                                <a
+                                    href="https://playhearthstone.com/en-us/cards"
+                                    target="_blank"
+                                >
+                                    Here
+                                </a>
+                            </div>
+                        )}
                         {this.state.cards.map((card: any, idx: number) => (
                             <li key={idx} className="single-card">
                                 <div className="card-wrap">
