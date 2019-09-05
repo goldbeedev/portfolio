@@ -14,14 +14,17 @@ class Contact extends React.Component {
                             alt=""
                         />
                     </a>
-                    <a href="https://github.com/goldbeedev">
+                    <a href="https://github.com/goldbeedev" target="_blank">
                         <img
                             className="contact-icon hvr-grow"
                             src="../images/github-icon.png"
                             alt=""
                         />
                     </a>
-                    <a href="https://www.linkedin.com/in/justin-goldby-b0885b39/">
+                    <a
+                        href="https://www.linkedin.com/in/justin-goldby-b0885b39/"
+                        target="_blank"
+                    >
                         <img
                             className="contact-icon hvr-grow"
                             src="../images/linkedin-icon.png"
