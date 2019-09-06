@@ -135,6 +135,22 @@ class Portfolio extends React.Component {
                                 </ul>
                             </div>
                         </div>
+                        <div className="col-sm-12">
+                            <p className="disclaimer">
+                                Disclaimer: The opinions expressed on this site
+                                are my own and are not reflective of the views
+                                of Glidewell Laboratories. I am an employee of
+                                Glidewell and do not own the websites referenced
+                                under Glidewell Laboratories. Any website listed
+                                here is not intended to expose intellectual
+                                property and/or trade secrets and is merely
+                                displayed as a reference to my own contributions
+                                to Glidewell Laboratories. This website is not
+                                intended for commercial purposes, and is
+                                strictly representative as informational
+                                purposes only.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
